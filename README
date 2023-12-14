@@ -1,7 +1,9 @@
+#You can run aws machine by ./fast_up.sh command
+
 #Connect to your intance using ssh dynamic port
 ssh -i "key-first.pem" -D 1080 ubuntu@<your_public_dns>
 #Connect to your intance using ssh remote port forwarding
 ssh -i "key-first.pem" -R 9898:localhost:8080 ubuntu@<your_public_dns>
 
-# Запуск HTTP сервера на порті 8000
+# Запуск HTTP сервера на порті 8080
 python3 -m http.server 8080
